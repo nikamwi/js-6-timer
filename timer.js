@@ -6,38 +6,40 @@ function settime(){
     document.getElementById('divi').style.display = "block";
 }
 
-const startEl = document.getElementById('start');
-const pausEl = document.getElementById('paus');
-const roundEl = document.getElementById('round');
-const resetEl = document.getElementById('reset');
-const rounds = document.getElementById('rounds');
+// const startEl = document.getElementById('start');
+// const pausEl = document.getElementById('paus');
+// const roundEl = document.getElementById('round');
+// const resetEl = document.getElementById('reset');
+// const rounds = document.getElementById('rounds');
+
+seconds = document.getElementById('second')*1;
+minutes = document.getElementById('minute');
+hours = document.getElementById('hour');
 
 
-const seconds = document.getElementById('second');
-const minutes = document.getElementById('minute');
-const hours = document.getElementById('hour');
+console.log(seconds)
 
-// veranairad avamushave taimeri/
-
-
-function start() {
+function start(seconds, minutes, hours) {
     intervalId = setInterval(() => {
-        // seconds -- ;
+        seconds -- ;
 
-        if (seconds > 0) {
-            seconds --;
-        }
-        else if (seconds == 0 && minutes > 0) {
-            minutes --;
-            seconds == 60;
-        }
-        else if (seconds == 0 && minutes == 0 && hours > 0) {
-            hours --;
-            minutes == 60;
-        }
+        // if (seconds > 0) {
+        //     seconds --;
+        // }
+        // else if (seconds == 0 && minutes > 0) {
+        //     minutes --;
+        //     seconds == 60;
+        // }
+        // else if (seconds == 0 && minutes == 0 && hours > 0) {
+        //     hours --;
+        //     minutes == 60;
+        // }
         // else if (seconds == 0 && minutes == 0 && hours == 0) {
             
         // }
+        document.getElementById("second").innerHTML = seconds
+        // document.getElementById("minute").innerHTML = minutes
+        // document.getElementById("hour").innerHTML = hours 
     }, 100);
 }
 
