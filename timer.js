@@ -1,50 +1,55 @@
+let hour, minute,second;
+
 function settime(){
     document.getElementById('hour').innerHTML = document.getElementById('sethour').value;
     document.getElementById('minute').innerHTML = document.getElementById('setminute').value;
     document.getElementById('second').innerHTML = document.getElementById('setsecond').value;
     document.getElementById('settimer').style.display = "none";
     document.getElementById('divi').style.display = "block";
+    
 }
 
-// const startEl = document.getElementById('start');
-// const pausEl = document.getElementById('paus');
-// const roundEl = document.getElementById('round');
-// const resetEl = document.getElementById('reset');
-// const rounds = document.getElementById('rounds');
 
-seconds = document.getElementById('second')*1;
-minutes = document.getElementById('minute');
-hours = document.getElementById('hour');
+function start() {
+    hour = document.getElementById('hour').innerHTML;
+    minute = document.getElementById('minute').innerHTML;
+    second = document.getElementById('second').innerHTML;
 
 
-console.log(seconds)
-
-function start(seconds, minutes, hours) {
+    hour  *= 1;
+    minute  *= 1;
+    second  *= 1;
+    
+    
     intervalId = setInterval(() => {
-        seconds -- ;
+        second -1 ;
 
-        // if (seconds > 0) {
-        //     seconds --;
-        // }
-        // else if (seconds == 0 && minutes > 0) {
-        //     minutes --;
-        //     seconds == 60;
-        // }
-        // else if (seconds == 0 && minutes == 0 && hours > 0) {
-        //     hours --;
-        //     minutes == 60;
-        // }
-        // else if (seconds == 0 && minutes == 0 && hours == 0) {
-            
-        // }
-        document.getElementById("second").innerHTML = seconds
-        // document.getElementById("minute").innerHTML = minutes
-        // document.getElementById("hour").innerHTML = hours 
-    }, 100);
+        if (second > 0) {
+            second -= 1;
+        }
+        else if (second = 0 || minute > 0) {
+            minute -= 1;
+            second = 60;
+        }
+        else if (second = 0 || minute == 0 || hour > 0) {
+            hour-= 1;
+            minute = 60;
+        }
+        else if (second == 0 || minute == 0 || hour == 0) {
+            second == 0;
+            minute == 0;
+            hour == 0;
+        }
+        document.getElementById("second").innerHTML = second
+        document.getElementById("minute").innerHTML = minute
+        document.getElementById("hour").innerHTML = hour
+        document.getElementById("start").style.display = "none"
+        document.getElementById("paus").style.display = "block"
+    }, 1000);
 }
 
 function round() {
     const round = document.createElement('div');
     round.innerText = `${hPassed}:${mPassed}:${sPassed}`;
-    rounds.append(round);
+    round.append(round);
 }

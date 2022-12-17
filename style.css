@@ -37,6 +37,7 @@ input{
 .btnebi{
     padding-top: 50px;
     padding-bottom: 20px;
+    padding-left: 80px;
 }
 .start, .paus, .round{
     margin-right: 10px;
@@ -51,4 +52,6 @@ button{
 }
 .paus{
     display: none;
+    position: absolute;
+    margin-left: 120px;
 }
