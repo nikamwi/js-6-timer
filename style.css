@@ -10,6 +10,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: black;
+    flex-direction: column;
 }
 section{
     width: 600px;
@@ -28,6 +29,7 @@ input{
 }
 .divi{
     display: none;
+    padding: 0;
 }
 .timer{
     display: flex;
@@ -35,9 +37,10 @@ input{
     justify-content: center;
 }
 .btnebi{
+    display: flex;
     padding-top: 50px;
     padding-bottom: 20px;
-    padding-left: 80px;
+    padding-left: 200px;
 }
 .start, .paus, .round{
     margin-right: 10px;
@@ -52,6 +55,26 @@ button{
 }
 .paus{
     display: none;
-    position: absolute;
-    margin-left: 120px;
+}
+body rounds{
+    width: 600px;
+    background-color: aqua;
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+}
+.pebi{
+    display: flex;
+}
+.pebi p{
+    font-size: 50px;
+}
+.hoursp{
+    margin-left: 62px;
+}
+.minutesp{
+    margin-left: 50px;
+}
+.secondsp{
+    margin-left: 24px;
 }

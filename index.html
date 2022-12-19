@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>timer</title>
-    <script src="timer.js"></script>
+    
 </head>
 <body>
     <section>
+        <div class="pebi">
+            <p class="hoursp">hour</p>
+            <p class="minutesp">minute</p>
+            <p class="secondsp">second</p>
+        </div>
+        <div id="settimisdiv">
         <div class="settimer" id="settimer">
             <input type="number" name="sethour" id="sethour">
             <p>&#58;</p>
@@ -17,7 +23,7 @@
             <p>&#58;</p>
             <input type="number" name="setsecond" id="setsecond">
             <button class="set" onclick="settime()" id="set">set time</button>
-        </div>
+        </div></div>
         <div class="divi" id="divi">
         <div class="timer" id="timer">
             <p class="hour" id="hour">0</p>
@@ -27,13 +33,14 @@
             <p class="second" id="second">450</p>
         </div></div>
         <div class="btnebi" id="btnebi">
-             <button class="paus" id="paus">paus</button>
+             <button class="paus" onclick="pausa()" id="paus">paus</button>
             <button class="start" onclick="start()" id="start">start</button>
             <button class="round" onclick="round()" id="round">round</button>
-            <button class="reset" id="reset">reset</button>
+            <button class="reset" onclick="reset()" id="reset">reset</button>
         </div>
-        <div class="roundebi" id="roundebi"></div>
+        
     </section>
-    
+    <section id="rounds"></section>
+    <script src="timer.js"></script>
 </body>
 </html>
